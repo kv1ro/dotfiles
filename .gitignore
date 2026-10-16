@@ -1,0 +1,9 @@
+# Neovimのキャッシュ・ステート等
+.repro
+/undo/
+/plugin/
+
+# 秘密情報（将来APIキーなどを使う場合用）
+.env
+.env.*
+secrets.lua

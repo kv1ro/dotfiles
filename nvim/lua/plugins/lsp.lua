@@ -7,7 +7,8 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason.nvim" },
     config = function()
-      vim.lsp.enable("solargraph")
+      -- Standard way to setup an LSP server with nvim-lspconfig
+      require("lspconfig").solargraph.setup({})
 
       vim.diagnostic.config({
         virtual_text = true,

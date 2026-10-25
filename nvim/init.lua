@@ -6,6 +6,18 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showmode = false
 
+-- Auto-reload settings for external changes
+vim.opt.autoread = true
+vim.opt.updatetime = 300
+
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd("checktime")
+    end
+  end,
+})
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({

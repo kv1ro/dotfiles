@@ -11,12 +11,14 @@ return {
     end
   },
   {
-    "monochrome-colorscheme",
-    dir = vim.fn.stdpath("config") .. "/lua/monochrome",
+    "habamax",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd[[colorscheme monochrome]]
+      vim.o.background = "dark"
+      vim.cmd[[colorscheme habamax]]
+      vim.api.nvim_set_hl(0, "Normal", { fg = "#ffffff", bg = "#1a1a1a" })
+      vim.api.nvim_set_hl(0, "NormalNC", { fg = "#ffffff", bg = "#1a1a1a" })
     end,
   },
 }

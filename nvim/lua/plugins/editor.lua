@@ -6,7 +6,7 @@ return {
       require("gitsigns").setup()
     end,
   },
-  
+
   {
     "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -27,17 +27,17 @@ return {
   },
   {
     "lervag/vimtex",
-    lazy = false,
+    ft = "tex",
     init = function()
       vim.g.vimtex_view_method = "zathura"
-      
+
       -- Optimize VimTeX behavior
       vim.g.vimtex_compiler_method = "latexmk"
-      
-      -- Don't automatically open the quickfix window for warnings, 
+
+      -- Don't automatically open the quickfix window for warnings,
       -- but keep it available via <localleader>le
       vim.g.vimtex_quickfix_mode = 0
-      
+
       -- Enable conceal for cleaner reading of math and symbols (optional, requires conceallevel>0 in Neovim)
       vim.g.vimtex_syntax_conceal = {
         accents = 1,

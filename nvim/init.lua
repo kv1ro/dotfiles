@@ -6,11 +6,18 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showmode = false
 
+-- Indentation defaults
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.smartindent = true
+
 -- Auto-reload settings for external changes
 vim.opt.autoread = true
 vim.opt.updatetime = 300
 
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
   callback = function()
     if vim.fn.mode() ~= 'c' then
       vim.cmd("checktime")

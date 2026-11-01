@@ -232,16 +232,16 @@ bar {
     font pango:UDEV Gothic NF 10
 
     colors {
-        background #282828
-        statusline #ebdbb2
-        separator  #504945
+        background #1a1a1a
+        statusline #ffffff
+        separator  #4a4a4a
 
         #                  border  bg      text
-        focused_workspace  #83a598 #83a598 #282828
-        active_workspace   #504945 #504945 #ebdbb2
-        inactive_workspace #3c3836 #3c3836 #a89984
-        urgent_workspace   #cc241d #cc241d #ebdbb2
-        binding_mode       #d79921 #d79921 #282828
+        focused_workspace  #ffffff #ffffff #1a1a1a
+        active_workspace   #4a4a4a #4a4a4a #ffffff
+        inactive_workspace #2a2a2a #2a2a2a #8a8a8a
+        urgent_workspace   #ffffff #ffffff #1a1a1a
+        binding_mode       #ffffff #ffffff #1a1a1a
     }
 }
 include /etc/sway/config.d/*
@@ -282,10 +282,10 @@ output HDMI-A-2 resolution 1920x1080@60.000Hz position 0 0
 output eDP-1 position 0 1080
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
-# Gruvbox Window Colors
+# Monochrome Window Colors
 # class                 border  bground text    indicator child_border
-client.focused          #83a598 #83a598 #282828 #fabd2f   #83a598
-client.focused_inactive #504945 #504945 #ebdbb2 #504945   #504945
-client.unfocused        #3c3836 #3c3836 #a89984 #3c3836   #3c3836
-client.urgent           #cc241d #cc241d #ebdbb2 #cc241d   #cc241d
+client.focused          #ffffff #1a1a1a #ffffff #ffffff   #ffffff
+client.focused_inactive #4a4a4a #1a1a1a #8a8a8a #4a4a4a   #4a4a4a
+client.unfocused        #2a2a2a #1a1a1a #8a8a8a #2a2a2a   #2a2a2a
+client.urgent           #ffffff #1a1a1a #ffffff #ffffff   #ffffff
 input "1267:9083:ELAN_Touchscreen" events disabled

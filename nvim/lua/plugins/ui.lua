@@ -1,19 +1,7 @@
 return {
   {
     "ellisonleao/gruvbox.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("gruvbox").setup({
-        contrast = "hard", 
-        transparent_mode = true,
-        italic = {
-          strings = true,
-          comments = true,
-        },
-      })
-      vim.cmd[[colorscheme gruvbox]]
-    end,
+    enabled = false,
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -21,5 +9,14 @@ return {
     config = function()
       require('lualine').setup({ options = { theme = 'auto' } })
     end
+  },
+  {
+    "monochrome-colorscheme",
+    dir = vim.fn.stdpath("config") .. "/lua/monochrome",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd[[colorscheme monochrome]]
+    end,
   },
 }

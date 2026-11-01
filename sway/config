@@ -262,6 +262,7 @@ bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 # 輝度コントロール
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym Alt+Tab workspace back_and_forth
 # ウィンドウのタイトルバーを非表示にし、枠線のみ（太さ2px）にす/る
 default_border pixel 2
 default_floating_border pixel 2
@@ -287,3 +288,4 @@ client.focused          #83a598 #83a598 #282828 #fabd2f   #83a598
 client.focused_inactive #504945 #504945 #ebdbb2 #504945   #504945
 client.unfocused        #3c3836 #3c3836 #a89984 #3c3836   #3c3836
 client.urgent           #cc241d #cc241d #ebdbb2 #cc241d   #cc241d
+input "1267:9083:ELAN_Touchscreen" events disabled
